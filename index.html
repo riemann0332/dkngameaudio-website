@@ -6,26 +6,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./resources/css/reset.css" rel="stylesheet">
         <link href="./resources/css/index.css" rel="stylesheet">
+        <link href="./resources/css/_variables.css" rel="stylesheet">
+        <script src="./scripts/cards.js" defer></script>
     </head>
 
     <body>
         <div id="app">
 
             <section id="character-select" class="view is-active">
-                <div data-target="portfolio-davide">
+                <div class="character-select-header">
+                    <p>Character Select</p>
+                    <hr>
                 </div>
+                <div class="card-wrapper">
+                    <div data-target="portfolio-davide" class="card-outer">
+                        <div class="card-inner">
+                            <p>I</p>
+                            <div class="card-hero">
+                                <p>D</p>
+                            </div>
+                            <hr>
+                            <div class="card-name">
+                                <span>Davide</span>
+                                <span>Caldarone</span>
+                            </div>
+                            <p class="card-tagline">The Systems Thinker</p>
+                        </div>
+                    </div>
 
-                <div data-target="portfolio-cesare">
-                    
+                    <div data-target="portfolio-cesare" class="card-outer">
+                        <div class="card-inner">
+                            <p>II</p>
+                            <div class="card-hero">
+                                <p>C</p>
+                            </div>
+                            <hr>
+                            <div class="card-name">
+                                <span>Cesare</span>
+                                <span>Chiari</span>
+                            </div>
+                            <p class="card-tagline">The World Builder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-select-footer">
+
                 </div>
             </section>
 
             <section id="portfolio-davide" class="view">
-
+                <h1>AO</h1>
             </section>
 
             <section id="portfolio-cesare" class="view">
-
+                <h1>AE</h1>
             </section>
 
         </div>

@@ -1,8 +1,16 @@
+/*
+Global
+*/
+
 #app {
     position: relative;
     width: 100vw;
     height: 100vh;
 }
+
+/*
+Main wrapper
+*/
 
 .view {
     position: absolute;
@@ -18,4 +26,26 @@
     visibility: visible;
     opacity: 1;
     transition: opacity 0.5s;
+}
+
+/*
+Individual sections
+*/
+
+#portfolio-davide {
+    background-color: black;
+}
+
+#portfolio-cesare {
+    background-color: red;
+}
+
+/*
+Cards
+*/
+
+.card-outer {
+    width: 380px;
+    height: 600px;
+    background-color: green;
 }
