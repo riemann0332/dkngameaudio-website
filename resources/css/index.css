@@ -6,4 +6,16 @@
 
 .view {
     position: absolute;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+        opacity 0.5s,
+        visibility 0s 0.5s;
+}
+
+.view.is-active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s;
 }
