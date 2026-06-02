@@ -1,4 +1,12 @@
 /*
+Root
+*/
+
+:root {
+    font-size: 16px;
+}
+
+/*
 Global
 */
 
@@ -6,6 +14,7 @@ Global
     position: relative;
     width: 100vw;
     height: 100vh;
+    background-color: var(--primary);
 }
 
 /*
