@@ -1,20 +1,17 @@
 /*
-Root
-*/
-
-:root {
-    font-size: 16px;
-}
-
-/*
 Global
 */
 
+body {
+    font-family: 'Archivo', sans-serif;
+    color: var(--content);
+}
+
 #app {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-color: var(--primary);
+    background-color: var(--bg);
 }
 
 /*
@@ -38,7 +35,7 @@ Main wrapper
 }
 
 /*
-Individual sections
+Individual sections – Placeholder
 */
 
 #portfolio-davide {
@@ -50,7 +47,7 @@ Individual sections
 }
 
 /*
-Cards
+Cards – Placeholder
 */
 
 .card-outer {

@@ -1,6 +1,9 @@
 :root {
-    --primary: #0d0d14;
-    --secondary: #ede8d5;
+
+    font-size: 16px;
+
+    --bg: #0d0d14;
+    --content: #ede8d5;
     --accent-amber: #e8a020;
     --accent-blue: #4361ee;
 }
