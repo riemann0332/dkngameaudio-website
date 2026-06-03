@@ -6,4 +6,6 @@
     --content: #ede8d5;
     --accent-amber: #e8a020;
     --accent-blue: #4361ee;
+
+    --transition-curve: cubic-bezier(0.2, 0.7, 0.2, 1);
 }

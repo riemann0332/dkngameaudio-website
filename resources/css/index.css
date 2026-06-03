@@ -5,13 +5,13 @@ Global
 body {
     font-family: 'Archivo', sans-serif;
     color: var(--content);
-    background-color: var(--bg);
 }
 
 #app {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    background: radial-gradient(120% 90% at 50% 32%, #15151f 0%, var(--bg) 58%, #08080d 100%);
 }
 
 /*
@@ -95,6 +95,11 @@ Character select screen
     background:
         radial-gradient(135% 100% at 50% 0%, color-mix(in srgb, var(--accent) 9%, transparent) 0%, transparent 52%),
         linear-gradient(180deg, #101019 0%, #0c0c12 100%);
+    transition:
+        transform 0.5s var(--transition-curve),
+        border-color 0.5s,
+        box-shadow 0.5s,
+        opacity 0.5s;
 }
 
 .card-inner {
@@ -109,6 +114,7 @@ Character select screen
         clamp(26px, 3vw, 38px)
         clamp(22px, 2.6vw, 32px)
         clamp(28px, 3vw, 36px);
+    transition: border-color 0.5s;
 }
 
 /* Card text elements*/
@@ -137,12 +143,16 @@ Character select screen
     max-height: 48%;
 }
 
+.card-hero p {
+    transition: text-shadow 0.5s ease;
+}
+
 .card-inner hr {
     width: 44px;
     border: none;
     border-top: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
     margin-bottom: 26px;
-    transition: width 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition: width 0.5s var(--transition-curve);
 }
 
 .card-name {
@@ -177,12 +187,23 @@ Character select screen
 
 /* Hover state */
 .card-outer:hover {
+    transform: translateY(-8px);
+    border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+    box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.8), 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent);
     cursor: pointer;
+}
+
+.card-outer:hover .card-inner {
+    border-color: color-mix(in srgb, var(--accent) 60%, transparent);
 }
 
 .card-outer:hover hr {
     width: 72px;
-    transition: width 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition: width 0.5s var(--transition-curve);
+}
+
+.card-outer:hover .card-hero p {
+    text-shadow: 0 0 46px color-mix(in srgb, var(--accent) 50%, transparent);
 }
 
 /* Character select footer */
