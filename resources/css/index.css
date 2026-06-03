@@ -45,23 +45,22 @@ Character select screen
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    gap: clamp(24px, 3vh, 84px);
+    gap: clamp(24px, 4.5vh, 84px);
     padding: 0 24px;
 }
 
 /* Top label */
-
 .character-select-header {
     display:flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 8px;
 }
 
 .character-select-header p {
     font-weight: 500;
     font-size: 11px;
-    letter-spacing: 0.62em;
-    text-indent: 0.62em;
+    letter-spacing: 0.58em;
+    text-indent: 0.58em;
     text-transform: uppercase;
     color: color-mix(in srgb, var(--content) 46%, transparent);
 }
@@ -91,7 +90,7 @@ Character select screen
 .card-outer {
     position: relative;
     width: clamp(300px, 26vw, 384px);
-    aspect-ratio: 5/7.7;
+    aspect-ratio: 5/7.6;
     border: 1px solid color-mix(in srgb, var(--content) 16%, transparent);
     background:
         radial-gradient(135% 100% at 50% 0%, color-mix(in srgb, var(--accent) 9%, transparent) 0%, transparent 52%),
@@ -113,7 +112,6 @@ Character select screen
 }
 
 /* Card text elements*/
-
 .card-numeral {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
@@ -135,7 +133,7 @@ Character select screen
     text-indent: 0.01em;
     line-height: 0.8;
     color: var(--accent);
-    margin-top: 24px;
+    margin-top: 16px;
     max-height: 48%;
 }
 
@@ -177,10 +175,7 @@ Character select screen
     color: color-mix(in srgb, var(--content) 58%, transparent);
 }
 
-/*
-Hover state
-*/
-
+/* Hover state */
 .card-outer:hover {
     cursor: pointer;
 }
@@ -189,6 +184,32 @@ Hover state
     width: 72px;
     transition: width 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
+
+/* Character select footer */
+
+.character-select-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.character-select-footer img {
+    width: 160px;
+    height: auto;
+    -weblit-mask-image: linear-gradient(to right, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.6));
+    mask-image: linear-gradient(to right, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.6));
+}
+
+.character-select-footer p {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.58em;
+    text-indent: 0.58em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--content) 46%, transparent);
+} 
 
 /*
 Individual sections – Placeholder
