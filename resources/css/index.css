@@ -45,6 +45,31 @@ Character select screen
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    gap: clamp(24px, 3vh, 84px);
+    padding: 0 24px;
+}
+
+/* Top label */
+
+.character-select-header {
+    display:flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.character-select-header p {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.62em;
+    text-indent: 0.62em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--content) 46%, transparent);
+}
+
+.character-select-header hr {
+    width: 38px;
+    border: none;
+    border-top: 1px solid color-mix(in srgb, var(--content) 30%, transparent);
 }
 
 /* Card wrapper */
@@ -66,7 +91,7 @@ Character select screen
 .card-outer {
     position: relative;
     width: clamp(300px, 26vw, 384px);
-    aspect-ratio: 5/8;
+    aspect-ratio: 5/7.7;
     border: 1px solid color-mix(in srgb, var(--content) 16%, transparent);
     background:
         radial-gradient(135% 100% at 50% 0%, color-mix(in srgb, var(--accent) 9%, transparent) 0%, transparent 52%),
@@ -79,6 +104,7 @@ Character select screen
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
     padding:
         clamp(26px, 3vw, 38px)
@@ -109,13 +135,16 @@ Character select screen
     text-indent: 0.01em;
     line-height: 0.8;
     color: var(--accent);
+    margin-top: 24px;
+    max-height: 48%;
 }
 
 .card-inner hr {
     width: 44px;
     border: none;
     border-top: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
-    margin-bottom: 20px;
+    margin-bottom: 26px;
+    transition: width 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 .card-name {
@@ -126,7 +155,7 @@ Character select screen
     letter-spacing: 0.13em;
     text-indent: 0.13em;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .card-name span:first-child {
@@ -137,12 +166,28 @@ Character select screen
     font-weight: 500;
 }
 
+.card-tagline {
+    max-width: 24ch;
+    font-family: 'Archivo', sans-serif;
+    font-size: 10.5px;
+    line-height: 1.7;
+    letter-spacing: 0.26em;
+    text-indent: 0.26em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--content) 58%, transparent);
+}
+
 /*
 Hover state
 */
 
 .card-outer:hover {
+    cursor: pointer;
+}
 
+.card-outer:hover hr {
+    width: 72px;
+    transition: width 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 /*
@@ -156,7 +201,3 @@ Individual sections – Placeholder
 #portfolio-cesare {
     background-color: red;
 }
-
-/*
-Cards – Placeholder
-*/
