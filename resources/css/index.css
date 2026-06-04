@@ -290,6 +290,7 @@ Individual sections – Placeholder
 Media queries
 */
 
+/* iPhone 8 and similar */
 @media (max-width: 480px) {
 
     #app {
@@ -334,6 +335,7 @@ Media queries
     }
 
     .card-inner hr {
+        width: 72px;
         margin-bottom: 22px;
     }
 
@@ -356,12 +358,45 @@ Media queries
     } 
 }
 
+/* iPhone 12 and similar, tall phones */
 @media (max-width: 480px) and (min-height: 700px) {
     #character-select {
         gap: 3dvh;
     }
     .card-outer {
         height: 54dvh;
+    }
+
+    .card-inner {
+        padding-top: 5vw;
+    }
+
+    .card-hero {
+        font-size: 185px;
+    }
+
+    .card-name {
+        font-size: 24px;
+    }
+}
+
+/* iPhone 14Max and Samsung Galaxy S20 Ultra, unnecessarily tall screens */
+@media (max-width: 480px) and (min-height: 900px) {
+    #character-select {
+        gap: 4dvh;
+    }
+
+    .card-inner {
+        padding-bottom: 0;
+    }
+
+    .card-hero {
+        font-size: 242px;
+        margin-top: 12px;
+    }
+
+    .card-inner hr {
+        margin-bottom: 30px;
     }
 }
 
