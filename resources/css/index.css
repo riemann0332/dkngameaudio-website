@@ -76,6 +76,7 @@ Character select screen
     display: flex;
     gap: clamp(24px, 4vw, 64px);
     align-items: stretch;
+    scroll-behavior: smooth;
 }
 
 /* Cards */
@@ -206,6 +207,38 @@ Character select screen
     text-shadow: 0 0 46px color-mix(in srgb, var(--accent) 50%, transparent);
 }
 
+/*Dim unselected sibling card*/
+.card-wrapper:has(.card-outer:hover) .card-outer:not(:hover) {
+    opacity: 0.4;
+}
+
+.card-wrapper:has(.card-selected) .card-outer:not(.card-selected) {
+    opacity: 0.4;
+}
+
+/* Selected state */
+.card-selected,
+.card-selected:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 36px 80px -32px rgba(0, 0, 0, 0.85), 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent), 0 0 60px -10px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.card-selected .card-hero p,
+.card-selected:hover .card-hero p {
+    text-shadow: 0 0 52px color-mix(in srgb, var(--accent) 90%, transparent);
+}
+
+.card-selected .card-inner,
+.card-selected:hover .card-inner {
+    border-color: color-mix(in srgb, var(--accent) 80%, transparent);
+}
+
+.card-selected hr,
+.card-selected:hover hr {
+    width: 72px;
+}
+
 /* Character select footer */
 
 .character-select-footer {
@@ -237,9 +270,45 @@ Individual sections – Placeholder
 */
 
 #portfolio-davide {
-    background-color: black;
+    background-color: darkslategray;
 }
 
 #portfolio-cesare {
-    background-color: red;
+    background-color: darkslategray;
+}
+
+/*
+Media queries
+*/
+
+@media (max-width: 480px) {
+
+    .card-wrapper {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    }
+
+    .card-outer {
+        width: 76vw;
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+
+    .card-selected,
+    .card-selected:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-outer,
+    .card-hero p,
+    hr {
+        transition: none;
+    }
+
+    .card-outer {
+        transform: none;
+    }
 }
