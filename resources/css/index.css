@@ -22,6 +22,7 @@ Main wrapper
 .view {
     position: absolute;
     inset: 0;
+    overflow-y: auto;
     visibility: hidden;
     opacity: 0;
     transition:
@@ -275,15 +276,42 @@ Character select screen
 } 
 
 /*
-Individual sections – Placeholder
+Portfolio sections
 */
 
 #portfolio-davide {
-    background-color: darkslategray;
+    --accent: var(--accent-amber);
 }
 
 #portfolio-cesare {
-    background-color: darkslategray;
+    --accent: var(--accent-blue);
+}
+
+.portfolio-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.portfolio-header img {
+    width: 190px;
+    height: auto;
+}
+
+.portfolio-header button {
+    background: none;
+    background-color: var(--bg);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--content) 60%, transparent);
 }
 
 /*
@@ -358,7 +386,7 @@ Media queries
     } 
 }
 
-/* iPhone 12 and similar, tall phones */
+/* iPhone 12 and similar, tall screens */
 @media (max-width: 480px) and (min-height: 700px) {
     #character-select {
         gap: 3dvh;
