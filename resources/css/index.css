@@ -46,7 +46,7 @@ Character select screen
     justify-content: center;
     min-height: 100vh;
     gap: clamp(24px, 4.5vh, 84px);
-    padding: 0 24px;
+    padding: 2px 24px;
 }
 
 /* Top label */
@@ -86,6 +86,11 @@ Character select screen
 
 .card-outer:last-child {
     --accent: var(--accent-blue);
+}
+
+/* Optical correction for big C initial */
+.card-outer:last-child .card-hero p {
+    margin-right: 8px;
 }
 
 .card-outer {
@@ -165,6 +170,10 @@ Character select screen
     text-indent: 0.13em;
     text-transform: uppercase;
     margin-bottom: 24px;
+}
+
+.card-name span {
+    display: block;
 }
 
 .card-name span:first-child {
@@ -283,6 +292,19 @@ Media queries
 
 @media (max-width: 480px) {
 
+    #app {
+        min-height: 100dvh;
+    }
+
+    #character-select {
+        min-height: 100dvh;
+        gap: 14px;
+    }
+
+    .character-select-header {
+        gap: 4px;
+    }
+
     .card-wrapper {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -290,14 +312,56 @@ Media queries
     }
 
     .card-outer {
-        width: 76vw;
+        height: 75dvh;
+        width: auto;
+        aspect-ratio: 5/7.6;
         scroll-snap-align: center;
         flex-shrink: 0;
     }
 
+    .card-outer:hover,
     .card-selected,
     .card-selected:hover {
         transform: none;
+    }
+
+    .card-inner {
+        padding-top: 4vw;
+    }
+
+    .card-hero {
+        margin-top: 8px;
+    }
+
+    .card-inner hr {
+        margin-bottom: 22px;
+    }
+
+    .card-name {
+        margin-bottom: 12px;
+    }
+
+    .character-select-footer {
+        gap: 4px;
+    }
+
+    .character-select-footer img {
+        width: 134px;
+    }
+
+    .character-select-footer p {
+        font-size: 10px;
+        letter-spacing: 0.25em;
+        text-indent: 0.25em;
+    } 
+}
+
+@media (max-width: 480px) and (min-height: 700px) {
+    #character-select {
+        gap: 3dvh;
+    }
+    .card-outer {
+        height: 54dvh;
     }
 }
 

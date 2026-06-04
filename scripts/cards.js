@@ -4,7 +4,7 @@ for (let element of dataTargets) {
     element.addEventListener('click', () => {
         const rect = element.getBoundingClientRect();
         if (rect.left < 0 || rect.right > window.innerWidth) {
-            element.scrollIntoView();
+            element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             return;
         }
 
