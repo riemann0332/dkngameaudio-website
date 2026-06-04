@@ -299,6 +299,7 @@ Portfolio sections
 .portfolio-header img {
     width: 190px;
     height: auto;
+    cursor: pointer;
 }
 
 .portfolio-header button {

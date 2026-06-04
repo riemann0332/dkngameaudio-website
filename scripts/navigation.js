@@ -28,7 +28,16 @@ for (let element of dataTargets) {
 // Navigate from one of the portfolios back to the Character Select screen
 const backTargets = document.querySelectorAll("[data-target='character-select']");
 
-
+for (let element of backTargets) {
+    element.addEventListener('click', () => {
+        const current = document.querySelector(".is-active");
+        const targetSection = document.getElementById("character-select");
+        document.querySelector(".card-selected")?.classList.remove("card-selected");
+        history.replaceState(null, '', '#character-select');
+        current.classList.remove("is-active");
+        targetSection.classList.add("is-active");
+    })
+}
 
 // reloads the current page on refresh instead of going back to character select
 const hash = window.location.hash.slice(1);
