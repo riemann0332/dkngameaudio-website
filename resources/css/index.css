@@ -33,6 +33,10 @@ Main wrapper
     scroll-padding-top: 65px;
 }
 
+.view:focus {
+    outline: none;
+}
+
 .view.is-active {
     visibility: visible;
     opacity: 1;
@@ -323,7 +327,7 @@ Portfolio sections
 .portfolio-entries {
     max-width: 1250px;
     margin: 0 auto;
-    padding: 20px; 
+    padding: 20px;
 }
 
 .portfolio-entry-row {
@@ -387,6 +391,47 @@ Portfolio sections
 
 .portfolio-entry-row:nth-child(even) {
     flex-direction: row-reverse;
+}
+
+.tools-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 7dvh;
+}
+
+.tools-strip img {
+    max-height: 50px;
+    width: auto;
+    opacity: 0.37;
+}
+
+.wwise-logo {
+    filter: invert(1) grayscale(1) brightness(2);
+    margin-bottom: 5px;
+}
+
+.fl-logo {
+    filter: grayscale(1) brightness(2);
+}
+
+.ableton-logo {
+    height: 24px;
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.cycling-max-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cycling-logo {
+    height: 22px;
+}
+
+.max-logo {
+    filter: grayscale(1) brightness(2);
 }
 
 /*
