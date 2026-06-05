@@ -8,7 +8,8 @@
         <link href="./resources/css/_variables.css" rel="stylesheet">
         <link href="./resources/css/fonts.css" rel="stylesheet">
         <link href="./resources/css/index.css" rel="stylesheet">
-        <script src="./scripts/navigation.js" defer></script>
+        <script defer src="./scripts/navigation.js"></script>
+        <script defer src="./scripts/videoControls.js"></script>
     </head>
 
     <body>
@@ -64,17 +65,14 @@
                 <div class="portfolio-entries">
                     <article class="portfolio-entry-row">
                         <div class="entry-video-wrapper">
-                            <div class="video-placeholder"></div>
-                            <!-- commented until deployment as youtube embedding doesn't work locally for some reason
                             <iframe
-                                src="https://www.youtube.com/embed/lavFLJQCbfg"
+                                src="https://www.youtube.com/embed/lavFLJQCbfg?enablejsapi=1"
                                 title="Cube: Audio Redesign – Demo"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin"
                                 allowfullscreen>
                             </iframe>
-                            -->
                         </div>
                         <div class="entry-text-wrapper">
                             <h3>Cube – Audio Redesign</h3>
@@ -89,17 +87,47 @@
                     </article>
                     <article class="portfolio-entry-row">
                         <div class="entry-video-wrapper">
-                            <div class="video-placeholder"></div>
+                            <iframe src="https://www.youtube.com/embed/P4NyqltkX74?enablejsapi=1"
+                                title="Cube Audio Redesign: Sound Library – Preview"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                         <div class="entry-text-wrapper">
                             <h3>Cube – Audio Redesign</h3>
+                            <h4>Original Sound Library</h4>
                             <p class="entry-text-date">Apr 2024</p>
-                            <p class="entry-text-role">Sound Designer | Implementer</p>
+                            <p class="entry-text-role">Sound Designer</p>
                             <p class="entry-text-description">
-                                Complete audio redesign of the game, including Foley, weapons, creatures, and environmental sounds.
+                                ~700 assets designed for the Cube Project.
                                 <br>
-                                All audio assets created from scratch using field recording, synthesis, and sample manipulation.
+                                Tailored to specific in-game elements.
                             </p>
+                            <a href="https://www.dropbox.com/scl/fi/htncax4modwa5teq58km4/Cube_Sound_Library.zip?rlkey=914u9age2l5cyzquaz2vcfpht&st=9nut75x1&dl=1">Download the full library</a>
+                        </div>
+                    </article>
+                    <article class="portfolio-entry-row">
+                        <div class="entry-video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/5B9DqXr_ob8?enablejsapi=1"
+                                title="Foley Library – Preview"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="entry-text-wrapper">
+                            <h3>Original Foley Library</h3>
+                            <p class="entry-text-date">Nov 2024</p>
+                            <p class="entry-text-role">Foley Artist</p>
+                            <p class="entry-text-description">
+                                A library of 429 selected original recordings.
+                                <br>
+                                Organized to produce a structured set of assets for sound design and implementation workflow.
+                            </p>
+                            <a href="https://www.dropbox.com/scl/fi/7epjefjkgvk5tq2a82rjx/Foley_Library.zip?rlkey=rx4v2tp1vtln0gt97eohk8onk&st=c707msia&dl=1">Download the full library</a>
                         </div>
                     </article>
                     <article class="tools-strip">
@@ -108,6 +136,18 @@
                             src="./resources/images/wwise_logo_rgb.png"
                             alt="Wwise logo">
                         <img
+                            class="fmod-logo"
+                            src="./resources/images/FMOD Logo Black - Transparent Background.png"
+                            alt="FMOD logo">
+                        <img
+                            class="unity-logo"
+                            src="./resources/images/U_Logo_Small_Black_RGB_1C.png"
+                            alt="Unity logo">
+                        <img
+                            class="unreal-logo"
+                            src="./resources/images/Unreal_Engine_Logo.png"
+                            alt="Unreal Engine logo">
+                        <img
                             class="fl-logo" 
                             src="./resources/images/FLStudio_Logo_Light.png"
                             alt="FL Studio icon">
@@ -115,6 +155,10 @@
                             class="ableton-logo"
                             src="./resources/images/Ableton_Live_Logo.svg.png"
                             alt="Ableton live logo">
+                        <img
+                            class="pro-tools-logo"
+                            src="./resources/images/ProTools_logo.png"
+                            alt="Pro Tools logo">
                         <div class="cycling-max-wrapper">
                             <img
                                 class="cycling-logo"

@@ -309,27 +309,33 @@ Portfolio sections
     height: auto;
     cursor: pointer;
     margin: 6px 0 0 4px;
-    -weblit-mask-image: linear-gradient(to right, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.6));
-    mask-image: linear-gradient(to right, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.6));
+    opacity: 0.66;
+    transition:
+        opacity 0.25s ease;
+}
+
+.portfolio-header img:hover {
+    opacity: 0.92;
 }
 
 .portfolio-header button {
     background: none;
     background-color: var(--bg);
     border: none;
-    cursor: pointer;
     font-family: inherit;
     font-size: 11px;
     letter-spacing: 0.5em;
     text-indent: 0.5em;
     text-transform: uppercase;
+    padding: 11px 5px;
+    cursor: pointer;
     color: color-mix(in srgb, var(--content) 62%, transparent);
-    transition:
-        text-shadow 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 .portfolio-header button:hover {
-    text-shadow: 0 0 10px color-mix(in srgb, var(--content) 70%, transparent);
+    color: color-mix(in srgb, var(--content) 78%, transparent);
+    text-shadow: 0 0 10px color-mix(in srgb, var(--content) 74%, transparent);
 }
 
 .portfolio-header::after {
@@ -337,7 +343,7 @@ Portfolio sections
     position: absolute;
     top: 100%;
     width: 100%;
-    height: 48px;
+    height: 46px;
     background: linear-gradient(
         to bottom,
         color-mix(in srgb, var(--bg) 100%, transparent) 0%,
@@ -393,8 +399,33 @@ Portfolio sections
 .entry-text-wrapper h3 {
     font-size: 28px;
     letter-spacing: 0.08em;
-    color: color-mix(in srgb, var(--content) 94%, transparent);
+    color: color-mix(in srgb, var(--content) 92%, transparent);
     margin-bottom: 30px;
+}
+
+.entry-text-wrapper h3:has(+ h4) {
+    margin-bottom: 0;
+}
+
+.entry-text-wrapper h4 {
+    font-size: 20px;
+    letter-spacing: 0.09em;
+    color: color-mix(in srgb, var(--content) 70%, transparent);
+    margin-top: -36px;
+    margin-bottom: 12px;
+}
+
+.entry-text-wrapper a {
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: color-mix(in srgb, var(--content) 78%, transparent);
+    transition: all 0.25s ease;
+}
+
+.entry-text-wrapper a:hover {
+    color: color-mix(in srgb, var(--content) 86%, transparent);
+    text-shadow: 0 0 12px color-mix(in srgb, var(--content) 40%, transparent);
 }
 
 .entry-text-date, 
@@ -419,9 +450,11 @@ Portfolio sections
 }
 
 .tools-strip {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-items: center;
     margin-top: 7dvh;
 }
 
@@ -436,7 +469,23 @@ Portfolio sections
     margin-bottom: 5px;
 }
 
-.fl-logo {
+.fmod-logo {
+    filter: invert(1) grayscale(1) brightness(2);
+    height: 30px;
+}
+
+.unreal-logo {
+    height: 40px;
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.unity-logo,
+.pro-tools-logo {
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.fl-logo,
+.max-logo {
     filter: grayscale(1) brightness(2);
 }
 
@@ -453,10 +502,6 @@ Portfolio sections
 
 .cycling-logo {
     height: 22px;
-}
-
-.max-logo {
-    filter: grayscale(1) brightness(2);
 }
 
 /* Portfolio entries footer */
@@ -481,12 +526,14 @@ footer a {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.12em;
+    padding: 2px 0;
     color: color-mix(in srgb, var(--content) 55%, transparent);
 }
 
 footer p {
     font-size: 12px;
     letter-spacing: 0.08em;
+    padding: 2px 0;
     color: color-mix(in srgb, var(--content) 45%, transparent);
 }
 
