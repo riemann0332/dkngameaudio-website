@@ -36,6 +36,18 @@ for (let element of backTargets) {
         history.replaceState(null, '', '#character-select');
         current.classList.remove("is-active");
         targetSection.classList.add("is-active");
+        function handler(event) {
+            const prop = event.propertyName;
+            if (prop === 'opacity') {
+                current.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "instant"
+                })
+                current.removeEventListener('transitionend', handler);
+            }
+        }
+        current.addEventListener('transitionend', handler);
     })
 }
 
