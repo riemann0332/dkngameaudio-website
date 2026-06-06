@@ -257,7 +257,6 @@ Character select screen
 }
 
 /* Character select footer */
-
 .character-select-footer {
     display: flex;
     flex-direction: column;
@@ -343,6 +342,7 @@ Portfolio sections
     content: "";
     position: absolute;
     top: 100%;
+    left: 0;
     width: 100%;
     height: 48px;
     background: linear-gradient(
@@ -476,18 +476,18 @@ Portfolio sections
 }
 
 .tools-strip-mobile {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 22px;
     align-items: center;
     justify-items: center;
-    margin-top: 20dvh;
+    margin-top: 10dvh;
 }
 
 .tools-strip-mobile img {
         max-width: 10vw;
         height: auto;
-        opacity: 0.37;
+        opacity: 0.3;
     }
 
 .wwise-logo {
@@ -519,8 +519,7 @@ Portfolio sections
 
 .fl-logo-desktop,
 .fl-logo-mobile,
-.max-logo,
-.logic-pro-logo {
+.max-logo {
     filter: grayscale(1) brightness(2);
 }
 
@@ -551,6 +550,7 @@ Portfolio sections
 }
 
 /* Portfolio entries footer */
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -694,7 +694,7 @@ Media queries
     }
 
     .portfolio-entry-row:nth-child(even) {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .entry-video-wrapper,
@@ -703,14 +703,21 @@ Media queries
     }
 
     .entry-text-wrapper {
-    /*flex: 1;*/
-    gap: 12px;
+        gap: 12px;
     }
 
     .entry-text-wrapper h3 {
-    font-size: 18px;
-    letter-spacing: 0.07em;
-    margin-bottom: 1dvh;
+        font-size: 18px;
+        letter-spacing: 0.07em;
+        margin-bottom: 1dvh;
+    }
+
+    .entry-text-wrapper h4 {
+        font-size: 14px;
+        letter-spacing: 0.06em;
+        color: color-mix(in srgb, var(--content) 70%, transparent);
+        margin-top: 0;
+        margin-bottom: 12px;
     }
 
     .entry-text-date, 
@@ -720,6 +727,11 @@ Media queries
 
     .entry-text-role {
         margin-bottom: 2dvh;
+    }
+
+    .entry-text-wrapper a {
+        width: fit-content;
+        margin-top: 5dvh;
     }
 
     .entry-text-description {
@@ -736,6 +748,37 @@ Media queries
     
     .tools-strip-mobile {
         display: grid;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 4dvh;
+        align-items: center;
+        padding-bottom: 3dvh;
+        margin-top: 7dvh;
+    }
+
+    .footer-column {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-column:first-child {
+        gap: 3dvh;
+    }
+
+    footer a {
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.13em;
+        color: color-mix(in srgb, var(--content) 64%, transparent);
+    }
+
+    footer p {
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        padding: 0;
     }
 }
 
