@@ -447,6 +447,7 @@ Portfolio sections
 .entry-text-role {
     font-size: 15px;
     letter-spacing: 0.16em;
+    line-height: 1.6;
     color: color-mix(in srgb, var(--accent) 80%, transparent);
 }
 
