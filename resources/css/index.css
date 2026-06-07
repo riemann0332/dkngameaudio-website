@@ -633,6 +633,51 @@ Portfolio sections
     text-shadow: 0 0 14px color-mix(in srgb, var(--accent) 26%, transparent);
 }
 
+/* Google Drive CTA */
+.CTA-drive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: fit-content;
+    margin: 20dvh auto 2dvh;
+    /* top and bottom margin slightly different for optical adjustment */
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+/* Overrides CTA-email big margin-top when it's preceded by CTA-drive */
+.portfolio-entries:has(.CTA-drive) .CTA-email {
+    margin-top: 8dvh;
+}
+
+.CTA-drive p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--content) 70%, transparent);
+    transition: all 0.3s ease;
+}
+
+.CTA-drive p svg {
+    width: 24px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.CTA-drive:hover {
+    opacity: 1;
+}
+
+.CTA-drive:hover p {
+    text-shadow: 0 0 14px color-mix(in srgb, var(--accent) 26%, transparent);
+}
+
 /* Tools strip */
 .tools-strip-desktop {
     display: grid;
@@ -736,48 +781,43 @@ Portfolio sections
 
 footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 20px;
+    gap: 8px;
     scroll-snap-align: end;
     margin-top: 12dvh;
+    font-size: 16px;
 }
 
-.footer-column {
+.footer-link {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px
 }
 
 footer a {
-    display: block;
-    font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    padding: 2px 0;
     color: color-mix(in srgb, var(--content) 55%, transparent);
+    transition: text-shadow 0.25s ease;
 }
 
 footer p {
-    font-size: 12px;
     letter-spacing: 0.08em;
     padding: 2px 0;
     color: color-mix(in srgb, var(--content) 45%, transparent);
 }
 
-.footer-mailto {
-    color: color-mix(in srgb, var(--accent) 70%, transparent);
-    transition:
-        text-shadow 0.25s ease;
-}
-
-.footer-mailto:hover {
-    text-shadow: 0 0 13px color-mix(in srgb, var(--accent) 85%, transparent);
-}
-
 .footer-full-portfolio {
     transition: text-shadow 0.25s ease;
+}
+
+footer a:hover {
+    text-shadow: 0 0 10px color-mix(in srgb, var(--content) 64%, transparent);
 }
 
 .footer-full-portfolio:hover {
@@ -1010,11 +1050,22 @@ Media queries
 
     .CTA-email p:first-child svg {
         width: 18px;
-     }
+    }
 
     .CTA-email p:last-child {
         font-size: 16px;
         letter-spacing: 0.1em;
+    }
+
+    /* Drive CTA */
+    .CTA-drive p {
+        gap: 8px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .CTA-drive p svg {
+        width: 18px;
     }
 
     /* Tools strip, max width 480px */
@@ -1029,20 +1080,12 @@ Media queries
     footer {
         display: flex;
         flex-direction: column;
-        gap: 4dvh;
+        gap: 8px;
         align-items: center;
         padding-bottom: 3dvh;
         margin-top: 7dvh;
     }
 
-    .footer-column {
-        display: flex;
-        align-items: center;
-    }
-
-    .footer-column:first-child {
-        gap: 3dvh;
-    }
 
     footer a {
         font-size: 13px;
