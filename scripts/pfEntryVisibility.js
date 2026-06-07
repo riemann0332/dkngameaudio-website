@@ -1,4 +1,4 @@
-const rowsAndToolsStrip = document.querySelectorAll(".portfolio-entry-row, .tools-strip-desktop, .tools-strip-mobile");
+const rowsAndToolsStrip = document.querySelectorAll(".portfolio-entry-row, .portfolio-entry-row-squares, .tools-strip-desktop, .tools-strip-mobile");
 
 const rowObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
