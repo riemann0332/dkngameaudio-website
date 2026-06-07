@@ -60,3 +60,6 @@ if (hash) {
         target.classList.add('is-active');
     }
 }
+
+// calculates current year for copyright line in the footer
+document.getElementById("copyright-year").textContent = new Date().getFullYear();
