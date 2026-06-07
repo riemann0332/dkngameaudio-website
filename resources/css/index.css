@@ -509,6 +509,54 @@ Portfolio sections
     flex-direction: row-reverse;
 }
 
+/* Mail CTA */
+.CTA-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: fit-content;
+    margin: 20dvh auto 18dvh;
+    /* top and bottom margin slightly different for optical adjustment */
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.CTA-email p:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--accent) 70%, transparent);
+    transition: all 0.3s ease;
+}
+
+.CTA-email p:first-child svg {
+    fill: var(--accent);
+    width: 24px;
+    height: auto;
+}
+
+.CTA-email p:last-child {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: color-mix(in srgb, var(--content) 68%, transparent);
+    transition: all 0.3s ease;
+}
+
+.CTA-email:hover {
+    opacity: 1;
+}
+
+.CTA-email:hover p {
+    text-shadow: 0 0 14px color-mix(in srgb, var(--accent) 26%, transparent);
+}
+
 /* Tools strip */
 .tools-strip-desktop {
     display: grid;
@@ -516,9 +564,14 @@ Portfolio sections
     gap: 32px;
     align-items: center;
     justify-items: center;
-    margin-top: 12dvh;
+    /*margin-top: 12dvh;*/ 
     opacity: 0.2;
     transition: opacity 0.4s ease;
+}
+
+#portfolio-cesare .tools-strip-desktop,
+#portfolio-cesare .tools-strip-mobile {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .tools-strip-desktop img {
@@ -786,11 +839,16 @@ Media queries
         display: block;
     }
 
-    .entry-text-wrapper h3,
-    .entry-text-wrapper h3.entry-title-long {
+    .entry-text-wrapper h3 {
         font-size: 18px;
         letter-spacing: 0.06em;
         margin-bottom: 2dvh;
+    }
+
+    /* This might need cleaning, it's copying the style above but removing margin-bottom */
+    .entry-text-wrapper h3.entry-title-long {
+        font-size: 18px;
+        letter-spacing: 0.06em;
     }
 
     .entry-text-wrapper h4 {
@@ -811,8 +869,7 @@ Media queries
     }
 
     .entry-text-wrapper a {
-        width: fit-content;
-        margin-top: 5dvh;
+        margin-top: 4dvh;
     }
 
     .entry-text-description {
@@ -823,6 +880,30 @@ Media queries
         color: color-mix(in srgb, var(--content) 82%, transparent);
     }
 
+    /* Mail CTA */
+    .CTA-email {
+        gap: 14px;
+        margin: 20dvh auto 13dvh;
+        /* top and bottom margin slightly different for optical adjustment */
+        opacity: 1;
+        }
+
+    .CTA-email p:first-child {
+        gap: 8px;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .CTA-email p:first-child svg {
+        width: 18px;
+     }
+
+    .CTA-email p:last-child {
+        font-size: 16px;
+        letter-spacing: 0.1em;
+    }
+
+    /* Tools strip, max width 480px */
     .tools-strip-desktop {
         display: none;
     }
