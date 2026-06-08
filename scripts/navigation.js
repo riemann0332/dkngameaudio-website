@@ -22,7 +22,15 @@ for (let element of dataTargets) {
             }, 350,
         );
         
-    })
+    });
+
+    element.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            // forward navigation logic
+            element.click();
+        }
+    });
 }
 
 // Navigate from one of the portfolios back to the Character Select screen
@@ -48,7 +56,16 @@ for (let element of backTargets) {
             }
         }
         current.addEventListener('transitionend', handler);
-    })
+    });
+
+    element.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            // back to character select
+            element.click();
+        }
+    });
+
 }
 
 // reloads the current page on refresh instead of going back to character select

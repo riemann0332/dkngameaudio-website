@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>DKN Game Audio</title>
         <meta charset="UTF-8">
@@ -15,10 +15,42 @@
         <meta name="twitter:title" content="DKN Game Audio">
         <meta name="twitter:description" content="Game audio division specializing in music composition, sound design, and implementation.">
         <meta name="twitter:image" content="https://dkngameaudio.com/resources/images/dknga_previewImage.png">
+        <link rel="canonical" href="https://dkngameaudio.com">
+        <meta name="theme-color" content="#0D0D14">
+        <link rel="icon" type="image/png" href="./resources/images/dknga_favicon.png">
+        <link rel="apple-touch-icon" href="./resources/images/dknga_touchIcon.png">
+        <link rel="manifest" href="./manifest.json">
         <link href="./resources/css/reset.css" rel="stylesheet">
         <link href="./resources/css/_variables.css" rel="stylesheet">
         <link href="./resources/css/fonts.css" rel="stylesheet">
         <link href="./resources/css/index.css" rel="stylesheet">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService",
+                "name": "DKN Game Audio",
+                "description": "Game audio division specializing in music composition, sound design, and implementation.",
+                "url": "https://dkngameaudio.com",
+                "founder": [
+                    {
+                        "@type": "Person",
+                        "name": "Davide Caldarone",
+                        "jobTitle": "Music Composer, Sound Designer, Audio Implementer"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Cesare Chiari",
+                        "jobTitle": "Music Composer, Sound Designer, Audio Implementer"
+                    }
+                ],
+                "knowsAbout": [
+                    "Music Composition",
+                    "Sound Design",
+                    "Audio Implementation",
+                    "Game Audio"
+                ]
+            }
+        </script>
         <script defer src="./scripts/navigation.js"></script>
         <script defer src="./scripts/videoControls.js"></script>
         <script defer src="./scripts/pfEntryVisibility.js"></script>
@@ -27,528 +59,209 @@
     <body>
         <div id="app">
 
-            <section id="character-select" class="view is-active">
-                <div class="character-select-header">
-                    <p>Select your character</p>
-                    <hr>
-                </div>
-                <div class="card-wrapper">
-                    <div data-target="portfolio-davide" class="card-outer">
-                        <div class="card-inner">
-                            <p class="card-numeral">I</p>
-                            <div class="card-hero">
-                                <p>D</p>
+            <main>
+
+                <section id="character-select" class="view is-active">
+                    <div class="character-select-header">
+                        <p>Select your character</p>
+                        <hr>
+                    </div>
+                    <div class="card-wrapper">
+                        <div data-target="portfolio-davide" class="card-outer" role="button" tabindex="0">
+                            <div class="card-inner">
+                                <p class="card-numeral">I</p>
+                                <div class="card-hero">
+                                    <p>D</p>
+                                </div>
+                                <hr>
+                                <div class="card-name">
+                                    <span>Davide</span>
+                                    <span>Caldarone</span>
+                                </div>
+                                <p class="card-tagline">The Systems Thinker</p>
                             </div>
-                            <hr>
-                            <div class="card-name">
-                                <span>Davide</span>
-                                <span>Caldarone</span>
+                        </div>
+
+                        <div data-target="portfolio-cesare" class="card-outer" role="button" tabindex="0">
+                            <div class="card-inner">
+                                <p class="card-numeral">II</p>
+                                <div class="card-hero">
+                                    <p>C</p>
+                                </div>
+                                <hr>
+                                <div class="card-name">
+                                    <span>Cesare</span>
+                                    <span>Chiari</span>
+                                </div>
+                                <p class="card-tagline">The World Builder</p>
                             </div>
-                            <p class="card-tagline">The Systems Thinker</p>
                         </div>
                     </div>
-
-                    <div data-target="portfolio-cesare" class="card-outer">
-                        <div class="card-inner">
-                            <p class="card-numeral">II</p>
-                            <div class="card-hero">
-                                <p>C</p>
-                            </div>
-                            <hr>
-                            <div class="card-name">
-                                <span>Cesare</span>
-                                <span>Chiari</span>
-                            </div>
-                            <p class="card-tagline">The World Builder</p>
-                        </div>
+                    <div class="character-select-footer">
+                        <h1>
+                            <img src="./resources/images/DKNga_logoFair.png" alt="DKN Game Audio">
+                        </h1>
+                        <p>Music · Sound Design · Implementation</p>
                     </div>
-                </div>
-                <div class="character-select-footer">
-                    <img src="./resources/images/DKNga_logoFair.png" alt="DKN Game Audio logo">
-                    <p>Music · Sound Design · Implementation</p>
-                </div>
-            </section>
+                </section>
 
-            <section id="portfolio-davide" class="view">
-                <header class="portfolio-header">
-                    <img src="./resources/images/DKNga_logoFair.png" data-target="character-select" alt="DKN Game Audio logo">
-                    <button data-target="character-select">Character select</button>
-                </header>
-                <div class="portfolio-entries">
+                <section id="portfolio-davide" class="view">
+                    <header class="portfolio-header">
+                        <img src="./resources/images/DKNga_logoFair.png" data-target="character-select" role="button" tabindex="0" alt="DKN Game Audio – Back to Character Select">
+                        <button data-target="character-select">Character select</button>
+                    </header>
+                    <div class="portfolio-entries">
 
-                    <article class="portfolio-entry-row">
-                        <div class="entry-video-wrapper">
-                            <iframe 
-                                src="https://www.youtube.com/embed/1FrAvxr7C-Y?enablejsapi=1&origin=https://dkngameaudio.com"
-                                title="Celeste | Original Score Redesign – Celestial Resort"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <h3 class="entry-title-long">Celeste – Score Redesign</h3>
-                            <h4>Celestial Resort</h4>
-                            <p class="entry-text-date">May 2026</p>
-                            <p class="entry-text-role">Music Composer | Music Producer</p>
-                            <p class="entry-text-description">
-                                An original piece I've composed, produced and mixed for Celeste's third level.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-entry-row">
-                        <div class="entry-video-wrapper">
-                            <iframe
-                                src="https://www.youtube.com/embed/zdOwhux5bWk?enablejsapi=1&origin=https://dkngameaudio.com"
-                                title="Celeste | Original Score Redesign – Mirror Temple"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <h3 class="entry-title-long">Celeste – Score Redesign</h3>
-                            <h4>Reflection – Demo</h4>
-                            <p class="entry-text-date">Oct 2025</p>
-                            <p class="entry-text-role">Music Composer | Music Producer</p>
-                            <p class="entry-text-description">
-                                An original piece I've composed, produced and mixed for Celeste's final boss fight.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-entry-row">
-                        <div class="entry-video-wrapper">
-                            <iframe
-                                src="https://www.youtube.com/embed/E4LYyZgRIQs?enablejsapi=1&origin=https://dkngameaudio.com"
-                                title="Celeste | Original Score Redesign – Main Theme"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <h3 class="entry-title-long">Celeste – Score Redesign</h3>
-                            <h4>Main Theme – Demo</h4>
-                            <p class="entry-text-date">Jul 2025</p>
-                            <p class="entry-text-role">Music Composer | Music Producer</p>
-                            <p class="entry-text-description">
-                                An original piece I've composed, produced and mixed as Celeste's main theme.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-entry-row">
-                        <div class="entry-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/5B9DqXr_ob8?enablejsapi=1&origin=https://dkngameaudio.com"
-                                title="Foley Library – Preview"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <h3>Original Foley Library</h3>
-                            <p class="entry-text-date">Nov 2024</p>
-                            <p class="entry-text-role">Foley Artist</p>
-                            <p class="entry-text-description">
-                                A library of 429 selected original recordings.
-                                <br>
-                                Organized to produce a structured set of assets for sound design and implementation workflow.
-                            </p>
-                            <a href="https://www.dropbox.com/scl/fi/7epjefjkgvk5tq2a82rjx/Foley_Library.zip?rlkey=rx4v2tp1vtln0gt97eohk8onk&st=c707msia&dl=1">Download the full library</a>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-entry-row">
-                        <div class="entry-video-wrapper">
-                            <iframe
-                                src="https://www.youtube.com/embed/lavFLJQCbfg?enablejsapi=1&origin=https://dkngameaudio.com"
-                                title="Cube: Audio Redesign – Demo"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <h3>Cube – Audio Redesign</h3>
-                            <p class="entry-text-date">Apr 2024</p>
-                            <p class="entry-text-role">Sound Designer | Implementer</p>
-                            <p class="entry-text-description">
-                                Complete audio redesign of the game, including Foley, weapons, creatures, and environmental sounds.
-                                <br>
-                                All audio assets created from scratch using field recording, synthesis, and sample manipulation.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-entry-row">
-                        <div class="entry-video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/P4NyqltkX74?enablejsapi=1&origin=https://dkngameaudio.com"
-                                title="Cube Audio Redesign: Sound Library – Preview"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <h3>Cube – Audio Redesign</h3>
-                            <h4>Original Sound Library</h4>
-                            <p class="entry-text-date">Apr 2024</p>
-                            <p class="entry-text-role">Sound Designer</p>
-                            <p class="entry-text-description">
-                                ~700 assets designed for the Cube Project.
-                                <br>
-                                Tailored to specific in-game elements.
-                            </p>
-                            <a href="https://www.dropbox.com/scl/fi/htncax4modwa5teq58km4/Cube_Sound_Library.zip?rlkey=914u9age2l5cyzquaz2vcfpht&st=9nut75x1&dl=1">Download the full library</a>
-                        </div>
-                    </article>
-
-                    <a class="CTA-drive" href="https://drive.google.com/drive/folders/105dkyY2ZAJOdGUhiF6lgVjLQ5QULMZcJ" target="'_blank" rel="noreferrer">
-                        <p>
-                            Full portfolio | CV
-                            <svg
-                                fill="#ede8d5"
-                                viewBox="0 0 32 32"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g id="Drive">
-                                    <path d="M5.5,30A3.35,3.35,0,0,1,3,29a3.35,3.35,0,0,1-1-2.48V5.5A3.35,3.35,0,0,1,3,3,3.35,3.35,0,0,1,5.5,2h21A3.35,3.35,0,0,1,29,3,3.35,3.35,0,0,1,30,5.5v21A3.52,3.52,0,0,1,26.49,30Zm10-17L12.69,8.14l-6.2,10.7,2.81,4.8Zm9.94,6.45H13.23q-.11,0-2.89,4.78H22.67ZM19.14,7.59H13.77L19.9,18.16l.17.1h5.37Q19.29,7.58,19.14,7.59Z"/>
-                                </g>
-                            </svg>
-                        </p>
-                    </a>
-                    <a class="CTA-email" href="mailto:contact@dkngameaudio.com">
-                        <p>
-                            Get in touch
-                            <svg
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22,5V9L12,13,2,9V5A1,1,0,0,1,3,4H21A1,1,0,0,1,22,5ZM2,11.154V19a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V11.154l-10,4Z"/>
-                            </svg>
-                        </p>
-                        <p>contact@dkngameaudio.com</p>
-                    </a>
-                    <article class="tools-strip-desktop"> <!-- Hidden on mobile -->
-                        <img
-                            class="wwise-logo" 
-                            src="./resources/images/wwise_logo_rgb.png"
-                            alt="Wwise logo">
-                        <img
-                            class="fmod-logo"
-                            src="./resources/images/FMOD Logo Black - Transparent Background.png"
-                            alt="FMOD logo">
-                        <img
-                            class="unity-logo-desktop"
-                            src="./resources/images/Unity_logo_desktop.png"
-                            alt="Unity logo">
-                        <img
-                            class="unreal-logo-desktop"
-                            src="./resources/images/Unreal_Engine_Logo.png"
-                            alt="Unreal Engine logo">
-                        <img
-                            class="fl-logo-desktop"
-                            src="./resources/images/FLStudio_Logo_Light.png"
-                            alt="FL Studio icon">
-                        <img
-                            class="ableton-logo-desktop"
-                            src="./resources/images/Ableton_Live_Logo.svg.png"
-                            alt="Ableton live logo">
-                        <img
-                            class="pro-tools-logo"
-                            src="./resources/images/ProTools_logo.png"
-                            alt="Pro Tools logo">
-                        <div class="cycling-max-wrapper">
-                            <img
-                                class="cycling-logo"
-                                src="./resources/images/Cycling_74_logo.png"
-                                alt="Cycling 74 logo">
-                            <img
-                                class="max-logo"
-                                src="./resources/images/Max_logo.png"
-                                alt="Max/MSP 9 logo">
-                        </div>
-                    </article>
-                    <article class="tools-strip-mobile"> <!-- Hidden on desktop -->
-                        <img
-                            class="wwise-logo" 
-                            src="./resources/images/wwise_logo_rgb.png"
-                            alt="Wwise logo">
-                        <img
-                            class="fmod-logo"
-                            src="./resources/images/FMOD Logo Black - Transparent Background.png"
-                            alt="FMOD logo">
-                        <img
-                            class="unity-logo-mobile"
-                            src="./resources/images/Unity_logo_mobile.png"
-                            alt="Unity logo">
-                        <img
-                            class="unreal-logo-mobile"
-                            src="./resources/images/Unreal_logo_mobile.png"
-                            alt="Unreal Engine logo">
-                        <img
-                            class="fl-logo-mobile"
-                            src="./resources/images/FLStudio20_MasterIcon.png"
-                            alt="FL Studio icon">
-                        <img
-                            class="ableton-logo-mobile"
-                            src="./resources/images/Ableton_logo_mobile.png"
-                            alt="Ableton live logo">
-                        <img
-                            class="pro-tools-logo"
-                            src="./resources/images/ProTools_logo.png"
-                            alt="Pro Tools logo">
-                        <div class="cycling-max-wrapper">
-                            <img
-                                class="cycling-logo"
-                                src="./resources/images/Cycling_74_logo.png"
-                                alt="Cycling 74 logo">
-                            <img
-                                class="max-logo"
-                                src="./resources/images/Max_logo.png"
-                                alt="Max/MSP 9 logo">
-                        </div>
-                    </article>
-                    <footer>
-                        <p>A division of DKN</p>
-                        <div class="footer-link">
-                            <p>Studio head:</p>
-                            <a href="https://dunkan.world" target="_blank" rel="noreferrer">Dunkan</a>
-                        </div>
-                        <p>© <span id="copyright-year"></span> DKN Game Audio</p>
-                    </footer>
-                </div>
-            </section>
-            <!-- Cesare view -->
-            <section id="portfolio-cesare" class="view">
-                <header class="portfolio-header">
-                    <img src="./resources/images/DKNga_logoFair.png" data-target="character-select" alt="DKN Game Audio logo">
-                    <button data-target="character-select">Character select</button>
-                </header>
-                <div class="portfolio-entries">
-                    <article class="portfolio-entry-row is-visible">
-                        <div class="entry-video-wrapper">
-                            <iframe
-                                src="https://www.youtube.com/embed/j63K1ewysaM?enablejsapi=1&origin=https://dkngameaudio.com"
-                                title="Ancient - Eastern - Fantasy [Music Video Showcase]"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <h3>Ancient / Eastern / Fantasy</h3>
-                            <h4>Music Showcase</h4>
-                            <p class="entry-text-date">May 2026</p>
-                            <p class="entry-text-role">Music Composer | Music Producer</p>
-                            <p class="entry-text-description">
-                                An original song that blends three different musical influences into a unique and coherent composition.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="portfolio-entry-row">
-                        <div class="entry-img-wrapper">
-                            <img
-                                src="./resources/images/JesterMaskerade.png"
-                                alt="Jester Maskerade cover art">
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <div class="entry-title-links-wrapper">
-                                <h3>Jester Maskerade</h3>
-                                <div class="entry-links">
-                                    <a href="https://matteocordioli.itch.io/jester-maskerade" target="_blank" rel="noreferrer">
-                                        <img
-                                            class="itchio-logo-desktop"
-                                            src="./resources/images/itchio_badge.png"
-                                            alt="itch.io badge">
-                                        <img
-                                            class="itchio-logo-mobile"
-                                            src="./resources/images/itchio_app-icon.png"
-                                            alt="itch.io icon">
-                                    </a>
-                                    <a
-                                        href="https://soundcloud.com/djkiar01/sets/jester-maskerade-soundtracks/s-4wpS1PJ8o28?si=747a09fdeea040d79c0fd8f190c44502&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-                                        target="_blank"
-                                        rel="noreferrer">
-                                        <img
-                                            class="soundcloud-logo-desktop"
-                                            src="./resources/images/soundcloud_logo_color.png"
-                                            alt="SoundCloud logo">
-                                        <img
-                                            class="soundcloud-logo-mobile" 
-                                            src="./resources/images/soundcloud_icon_color.png"
-                                            alt="SoundCloud icon">
-                                    </a>
-                                </div>
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/1FrAvxr7C-Y?enablejsapi=1&origin=https://dkngameaudio.com"
+                                    title="Celeste | Original Score Redesign – Celestial Resort"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <h3 class="entry-title-long">Celeste – Score Redesign</h3>
+                                <h4>Celestial Resort</h4>
+                                <time class="entry-text-date" datetime="2026-05">May 2026</time>
+                                <p class="entry-text-role">Music Composer | Music Producer</p>
+                                <p class="entry-text-description">
+                                    An original piece I've composed, produced and mixed for Celeste's third level.
+                                </p>
                             </div>
-                            <p class="entry-text-date">Feb 2026</p>
-                            <p class="entry-text-role">Music Composer | Music Producer | Audio Implementer</p>
-                            <p class="entry-text-description">
-                                A game created during Global Game Jam 2026 within a 48-hour development cycle.
-                                <br>
-                                I was responsible for composing, producing and implementing the game’s music.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="portfolio-entry-row">
-                        <div class="entry-img-wrapper">
-                            <img
-                                src="./resources/images/HandysWander.png"
-                                alt="Handy's Wander title screen">
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <div class="entry-title-links-wrapper">
-                                <h3>Handy's Wander</h3>
-                                <div class="entry-links">
-                                    <a href="https://xino-spefno.itch.io/handys-wander" target="_blank" rel="noreferrer">
-                                        <img
-                                            class="itchio-logo-desktop" 
-                                            src="./resources/images/itchio_badge.png"
-                                            alt="itch.io badge">
-                                        <img
-                                            class="itchio-logo-mobile"
-                                            src="./resources/images/itchio_app-icon.png"
-                                            alt="itch.io icon">
-                                    </a>
-                                    <a
-                                        href="https://soundcloud.com/djkiar01/sets/handys-wander-wip-concept-music-environment/s-6PqyN34zU7o?si=578e5e755a684eb2a4431b62e5b67ae8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-                                        target="_blank"
-                                        rel="noreferrer">
-                                        <img
-                                            class="soundcloud-logo-desktop"
-                                            src="./resources/images/soundcloud_logo_color.png"
-                                            alt="SoundCloud logo">
-                                        <img
-                                            class="soundcloud-logo-mobile" 
-                                            src="./resources/images/soundcloud_icon_color.png"
-                                            alt="SoundCloud icon">
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="entry-text-date">Sep 2025</p>
-                            <p class="entry-text-role">Music Composer | Music Producer | Sound Designer | Audio Implementer</p>
-                            <p class="entry-text-description">
-                                An indie puzzle game in which I was responsible for nearly all aspects of the audio department, including composing and producing the in-game music, cutscenes sonorization, and contributing to the sound design.
-                            </p>
-                        </div>
-                    </article>
+                        </article>
 
-                    <article class="portfolio-entry-row">
-                        <div class="entry-video-wrapper">
-                            <iframe
-                                src="https://www.youtube.com/embed/vBQSoJnpQuA?enablejsapi=1&origin=https://dkngameaudio.com"
-                                title="The Explorer: 3D Game Kit Complete Resonorization [Educational Project]"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <div class="entry-title-links-wrapper">
-                                <h3 class="entry-title-long">The Explorer: 3D Game Kit</h3>
-                                <div class="entry-links">
-                                    <a
-                                        href="https://soundcloud.com/djkiar01/sets/complete-sonorization-the-explorer-3d-pm2-exam/s-kCwWBQJwgFk?si=0f2d66c91c2a4274b955cf465f7d86db&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-                                        target="_blank"
-                                        rel="noreferrer">
-                                        <img
-                                            class="soundcloud-logo-desktop" 
-                                            src="./resources/images/soundcloud_logo_color.png"
-                                            alt="SoundCloud logo">
-                                        <img
-                                            class="soundcloud-logo-mobile" 
-                                            src="./resources/images/soundcloud_icon_color.png"
-                                            alt="SoundCloud logo">
-                                    </a>
-                                </div>
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/zdOwhux5bWk?enablejsapi=1&origin=https://dkngameaudio.com"
+                                    title="Celeste | Original Score Redesign – Mirror Temple"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <h3 class="entry-title-long">Celeste – Score Redesign</h3>
+                                <h4>Reflection – Demo</h4>
+                                <time class="entry-text-date" datetime="2025-10">Oct 2025</time>
+                                <p class="entry-text-role">Music Composer | Music Producer</p>
+                                <p class="entry-text-description">
+                                    An original piece I've composed, produced and mixed for Celeste's final boss fight.
+                                </p>
                             </div>
-                            <p class="entry-text-date">Feb 2025</p>
-                            <p class="entry-text-role">Music Composer | Music Producer | Audio Implementer</p>
-                            <p class="entry-text-description">
-                                An original soundtrack composed and produced for The Explorer: 3D Game Kit.
-                                <br>
-                                For this academic project, I also managed audio implementation and interactive integration using Wwise.
-                            </p>
-                        </div>
-                    </article>
-    
-                    <article class="portfolio-entry-row">
-                        <div class="entry-img-wrapper">
-                            <img
-                                src="./resources/images/Tarot requiem_placeholder.png"
-                                alt="Handy's Wander title screen">
-                        </div>
-                        <div class="entry-text-wrapper">
-                            <div class="entry-title-links-wrapper">
-                                <h3>Tarot Requiem</h3>
-                                <div class="entry-links">
-                                    <a href="https://xino-spefno.itch.io/handys-wander" target="_blank" rel="noreferrer">
-                                        <img
-                                            class="itchio-logo-desktop" 
-                                            src="./resources/images/itchio_badge.png"
-                                            alt="itch.io badge">
-                                        <img
-                                            class="itchio-logo-mobile"
-                                            src="./resources/images/itchio_app-icon.png"
-                                            alt="itch.io icon">
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="entry-text-role">Audio Director | Music Composer | Music Producer | Sound Designer | Audio Implementer</p>
-                            <p class="entry-text-description">
-                                <strong>Among the finalists of Bologna Game Farm</strong>, Tarot Requiem is a tarot-inspired deckbuilding roguelike currently in development, where every card played gradually consumes the protagonist’s very existence.
-                            </p>
-                            <h5>Currently in development</h5>
-                        </div>
-                    </article>
+                        </article>
 
-                    <article class="portfolio-entry-row-squares">
-                        <h3>Music Production Work</h3>
-                        <div class="entry-square-img-wrapper">
-                            <div class="square-img">
-                                <a
-                                    href="https://open.spotify.com/intl-it/track/7kaqdzFaDBFiiTOisL4tHC?si=8de23a0ece20486b"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    class="square-img-link">
-                                    <img
-                                        src="./resources/images/Abracadabra_cover.png"
-                                        alt="Gabs – Abracadabra cover art">
-                                    <div class="square-overlay">
-                                        <p class="square-overlay-description">A Trap song I've produced and mixed for Gabs, an established rapper and freestyler within the Italian rap scene.</p>
-                                    </div>
-                                </a>
-                                <p class="img-square-text">Gabs – Abracadabra</p>
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/E4LYyZgRIQs?enablejsapi=1&origin=https://dkngameaudio.com"
+                                    title="Celeste | Original Score Redesign – Main Theme"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <h3 class="entry-title-long">Celeste – Score Redesign</h3>
+                                <h4>Main Theme – Demo</h4>
+                                <time class="entry-text-date" datetime="2025-07">Jul 2025</time>
+                                <p class="entry-text-role">Music Composer | Music Producer</p>
+                                <p class="entry-text-description">
+                                    An original piece I've composed, produced and mixed as Celeste's main theme.
+                                </p>
                             </div>
-                            <div class="square-img">
-                                <a
-                                    href="https://open.spotify.com/intl-it/track/1n8aRknv9TQvr3ibFxaZAk?si=b2c0b19d626942a6"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    class="square-img-link">
-                                    <img
-                                        src="./resources/images/Nero_di_seppia_cover.png"
-                                        alt="Cokie – Nero di Seppia cover art">
-                                    <div class="square-overlay">
-                                        <p class="square-overlay-description">A Hip-Hop song I've produced for the artist Cokie.</p>
-                                    </div>
-                                </a>
-                                <p class="img-square-text">Cokie – Nero di Seppia</p>
-                            </div>
-                        </div>
-                    </article>
+                        </article>
 
-                    <a class="CTA-email" href="mailto:contact@dkngameaudio.com">
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/5B9DqXr_ob8?enablejsapi=1&origin=https://dkngameaudio.com"
+                                    title="Foley Library – Preview"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <h3>Original Foley Library</h3>
+                                <time class="entry-text-date" datetime="2024-11">Nov 2024</time>
+                                <p class="entry-text-role">Foley Artist</p>
+                                <p class="entry-text-description">
+                                    A library of 429 selected original recordings.
+                                    <br>
+                                    Organized to produce a structured set of assets for sound design and implementation workflow.
+                                </p>
+                                <a href="https://www.dropbox.com/scl/fi/7epjefjkgvk5tq2a82rjx/Foley_Library.zip?rlkey=rx4v2tp1vtln0gt97eohk8onk&st=c707msia&dl=1">Download the full library</a>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/lavFLJQCbfg?enablejsapi=1&origin=https://dkngameaudio.com"
+                                    title="Cube: Audio Redesign – Demo"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <h3>Cube – Audio Redesign</h3>
+                                <time class="entry-text-date" datetime="2024-04">Apr 2024</time>
+                                <p class="entry-text-role">Sound Designer | Implementer</p>
+                                <p class="entry-text-description">
+                                    Complete audio redesign of the game, including Foley, weapons, creatures, and environmental sounds.
+                                    <br>
+                                    All audio assets created from scratch using field recording, synthesis, and sample manipulation.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/P4NyqltkX74?enablejsapi=1&origin=https://dkngameaudio.com"
+                                    title="Cube Audio Redesign: Sound Library – Preview"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <h3>Cube – Audio Redesign</h3>
+                                <h4>Original Sound Library</h4>
+                                <time class="entry-text-date" datetime="2024-04">Apr 2024</time>
+                                <p class="entry-text-role">Sound Designer</p>
+                                <p class="entry-text-description">
+                                    ~700 assets designed for the Cube Project.
+                                    <br>
+                                    Tailored to specific in-game elements.
+                                </p>
+                                <a href="https://www.dropbox.com/scl/fi/htncax4modwa5teq58km4/Cube_Sound_Library.zip?rlkey=914u9age2l5cyzquaz2vcfpht&st=9nut75x1&dl=1">Download the full library</a>
+                            </div>
+                        </article>
+
+                        <a class="CTA-drive" href="https://drive.google.com/drive/folders/105dkyY2ZAJOdGUhiF6lgVjLQ5QULMZcJ" target="'_blank" rel="noreferrer">
+                            <p>
+                                Full portfolio | CV
+                                <svg
+                                    fill="#ede8d5"
+                                    viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Drive">
+                                        <path d="M5.5,30A3.35,3.35,0,0,1,3,29a3.35,3.35,0,0,1-1-2.48V5.5A3.35,3.35,0,0,1,3,3,3.35,3.35,0,0,1,5.5,2h21A3.35,3.35,0,0,1,29,3,3.35,3.35,0,0,1,30,5.5v21A3.52,3.52,0,0,1,26.49,30Zm10-17L12.69,8.14l-6.2,10.7,2.81,4.8Zm9.94,6.45H13.23q-.11,0-2.89,4.78H22.67ZM19.14,7.59H13.77L19.9,18.16l.17.1h5.37Q19.29,7.58,19.14,7.59Z"/>
+                                    </g>
+                                </svg>
+                            </p>
+                        </a>
+                        <a class="CTA-email" href="mailto:contact@dkngameaudio.com">
                             <p>
                                 Get in touch
                                 <svg
@@ -559,70 +272,460 @@
                                 </svg>
                             </p>
                             <p>contact@dkngameaudio.com</p>
-                    </a>
-                    <article class="tools-strip-desktop">
-                        <img
-                            class="wwise-logo" 
-                            src="./resources/images/wwise_logo_rgb.png"
-                            alt="Wwise logo">
-                        <img
-                            class="fmod-logo"
-                            src="./resources/images/FMOD Logo Black - Transparent Background.png"
-                            alt="FMOD logo">
-                        <img
-                            class="ableton-logo-desktop"
-                            src="./resources/images/Ableton_Live_Logo.svg.png"
-                            alt="Ableton live logo">
-                        <img
-                            class="fl-logo-desktop" 
-                            src="./resources/images/FLStudio_Logo_Light.png"
-                            alt="FL Studio icon">
-                        <img
-                            class="logic-pro-logo"
-                            src="./resources/images/Logicpro-icon.png"
-                            alt="Logic Pro logo">
-                        <img
-                            class="pro-tools-logo"
-                            src="./resources/images/ProTools_logo.png"
-                            alt="Pro Tools logo">
-                    </article>
-                    <article class="tools-strip-mobile"> <!-- Hidden on desktop -->
-                        <img
-                            class="wwise-logo" 
-                            src="./resources/images/wwise_logo_rgb.png"
-                            alt="Wwise logo">
-                        <img
-                            class="fmod-logo"
-                            src="./resources/images/FMOD Logo Black - Transparent Background.png"
-                            alt="FMOD logo">
-                        <img
-                            class="fl-logo-mobile"
-                            src="./resources/images/FLStudio20_MasterIcon.png"
-                            alt="FL Studio icon">
-                        <img
-                            class="logic-pro-logo"
-                            src="./resources/images/Logicpro-icon.png"
-                            alt="Unreal Engine logo">
-                        <img
-                            class="ableton-logo-mobile"
-                            src="./resources/images/Ableton_logo_mobile.png"
-                            alt="Ableton live logo">
-                        <img
-                            class="pro-tools-logo"
-                            src="./resources/images/ProTools_logo.png"
-                            alt="Pro Tools logo">
-                    </article>
-                    <footer>
-                        <p>A division of DKN</p>
-                        <div class="footer-link">
-                            <p>Studio head:</p>
-                            <a href="https://dunkan.world" target="_blank" rel="noreferrer">Dunkan</a>
-                        </div>
-                        <p>© <span id="copyright-year"></span> DKN Game Audio</p>
-                    </footer>
-                </div>
-            </section>
+                        </a>
 
+                        <ul class="tools-strip-desktop"> <!-- Hidden on mobile -->
+                            <li>
+                                <img
+                                    class="wwise-logo" 
+                                    src="./resources/images/wwise_logo_rgb.png"
+                                    alt="Wwise logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="fmod-logo"
+                                    src="./resources/images/FMOD Logo Black - Transparent Background.png"
+                                    alt="FMOD logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="unity-logo-desktop"
+                                    src="./resources/images/Unity_logo_desktop.png"
+                                    alt="Unity logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="unreal-logo-desktop"
+                                    src="./resources/images/Unreal_Engine_Logo.png"
+                                    alt="Unreal Engine logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="fl-logo-desktop"
+                                    src="./resources/images/FLStudio_Logo_Light.png"
+                                    alt="FL Studio icon">
+                            </li>
+                            <li>
+                                <img
+                                    class="ableton-logo-desktop"
+                                    src="./resources/images/Ableton_Live_Logo.svg.png"
+                                    alt="Ableton live logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="pro-tools-logo"
+                                    src="./resources/images/ProTools_logo.png"
+                                    alt="Pro Tools logo">
+                            </li>
+                            <li>
+                                <div class="cycling-max-wrapper">
+                                    <img
+                                        class="cycling-logo"
+                                        src="./resources/images/Cycling_74_logo.png"
+                                        alt="Cycling 74 logo">
+                                    <img
+                                        class="max-logo"
+                                        src="./resources/images/Max_logo.png"
+                                        alt="Max/MSP 9 logo">
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="tools-strip-mobile"> <!-- Hidden on desktop -->
+                            <li>
+                                <img
+                                    class="wwise-logo" 
+                                    src="./resources/images/wwise_logo_rgb.png"
+                                    alt="Wwise logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="fmod-logo"
+                                    src="./resources/images/FMOD Logo Black - Transparent Background.png"
+                                    alt="FMOD logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="unity-logo-mobile"
+                                    src="./resources/images/Unity_logo_mobile.png"
+                                    alt="Unity logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="unreal-logo-mobile"
+                                    src="./resources/images/Unreal_logo_mobile.png"
+                                    alt="Unreal Engine logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="fl-logo-mobile"
+                                    src="./resources/images/FLStudio20_MasterIcon.png"
+                                    alt="FL Studio icon">
+                            </li>
+                            <li>
+                                <img
+                                    class="ableton-logo-mobile"
+                                    src="./resources/images/Ableton_logo_mobile.png"
+                                    alt="Ableton live logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="pro-tools-logo"
+                                    src="./resources/images/ProTools_logo.png"
+                                    alt="Pro Tools logo">
+                            </li>
+                            <li>
+                                <div class="cycling-max-wrapper">
+                                    <img
+                                        class="cycling-logo"
+                                        src="./resources/images/Cycling_74_logo.png"
+                                        alt="Cycling 74 logo">
+                                    <img
+                                        class="max-logo"
+                                        src="./resources/images/Max_logo.png"
+                                        alt="Max/MSP 9 logo">
+                                </div>
+                            </li>
+                        </ul>
+
+                        <footer>
+                            <p>A division of DKN</p>
+                            <div class="footer-link">
+                                <p>Studio head:</p>
+                                <a href="https://dunkan.world" target="_blank" rel="noreferrer">Dunkan</a>
+                            </div>
+                            <p>© <span id="copyright-year"></span> DKN Game Audio</p>
+                        </footer>
+                    </div>
+                </section>
+                <!-- Cesare view -->
+                <section id="portfolio-cesare" class="view">
+                    <header class="portfolio-header">
+                        <img src="./resources/images/DKNga_logoFair.png" data-target="character-select" role="button" tabindex="0" alt="DKN Game Audio – Back to Character Select">
+                        <button data-target="character-select">Character select</button>
+                    </header>
+                    <div class="portfolio-entries">
+                        <article class="portfolio-entry-row is-visible">
+                            <figure class="entry-video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/j63K1ewysaM?enablejsapi=1&origin=https://dkngameaudio.com"
+                                    title="Ancient - Eastern - Fantasy [Music Video Showcase]"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <h3>Ancient / Eastern / Fantasy</h3>
+                                <h4>Music Showcase</h4>
+                                <time class="entry-text-date" datetime="2026-05">May 2026</time>
+                                <p class="entry-text-role">Music Composer | Music Producer</p>
+                                <p class="entry-text-description">
+                                    An original song that blends three different musical influences into a unique and coherent composition.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-img-wrapper">
+                                <img
+                                    src="./resources/images/JesterMaskerade.png"
+                                    alt="Jester Maskerade cover art">
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <div class="entry-title-links-wrapper">
+                                    <h3>Jester Maskerade</h3>
+                                    <div class="entry-links">
+                                        <a href="https://matteocordioli.itch.io/jester-maskerade" target="_blank" rel="noreferrer" aria-label="Play Jester Maskerade on itch.io">
+                                            <img
+                                                class="itchio-logo-desktop"
+                                                src="./resources/images/itchio_badge.png"
+                                                alt="itch.io">
+                                            <img
+                                                class="itchio-logo-mobile"
+                                                src="./resources/images/itchio_app-icon.png"
+                                                alt="itch.io">
+                                        </a>
+                                        <a
+                                            href="https://soundcloud.com/djkiar01/sets/jester-maskerade-soundtracks/s-4wpS1PJ8o28?si=747a09fdeea040d79c0fd8f190c44502&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            aria-label="Listen to Jester Maskerade OST on SoundCloud">
+                                            <img
+                                                class="soundcloud-logo-desktop"
+                                                src="./resources/images/soundcloud_logo_color.png"
+                                                alt="SoundCloud">
+                                            <img
+                                                class="soundcloud-logo-mobile" 
+                                                src="./resources/images/soundcloud_icon_color.png"
+                                                alt="SoundCloud">
+                                        </a>
+                                    </div>
+                                </div>
+                                <time class="entry-text-date" datetime="2026-02">Feb 2026</time>
+                                <p class="entry-text-role">Music Composer | Music Producer | Audio Implementer</p>
+                                <p class="entry-text-description">
+                                    A game created during Global Game Jam 2026 within a 48-hour development cycle.
+                                    <br>
+                                    I was responsible for composing, producing and implementing the game’s music.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-img-wrapper">
+                                <img
+                                    src="./resources/images/HandysWander.png"
+                                    alt="Handy's Wander title screen">
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <div class="entry-title-links-wrapper">
+                                    <h3>Handy's Wander</h3>
+                                    <div class="entry-links">
+                                        <a href="https://xino-spefno.itch.io/handys-wander" target="_blank" rel="noreferrer" aria-label="Play Handy's Wander on itch.io">
+                                            <img
+                                                class="itchio-logo-desktop" 
+                                                src="./resources/images/itchio_badge.png"
+                                                alt="itch.io">
+                                            <img
+                                                class="itchio-logo-mobile"
+                                                src="./resources/images/itchio_app-icon.png"
+                                                alt="itch.io">
+                                        </a>
+                                        <a
+                                            href="https://soundcloud.com/djkiar01/sets/handys-wander-wip-concept-music-environment/s-6PqyN34zU7o?si=578e5e755a684eb2a4431b62e5b67ae8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            aria-label="Listen to Handy's Wander OST on SoundCloud">
+                                            <img
+                                                class="soundcloud-logo-desktop"
+                                                src="./resources/images/soundcloud_logo_color.png"
+                                                alt="SoundCloud">
+                                            <img
+                                                class="soundcloud-logo-mobile" 
+                                                src="./resources/images/soundcloud_icon_color.png"
+                                                alt="SoundCloud">
+                                        </a>
+                                    </div>
+                                </div>
+                                <time class="entry-text-date" datetime="2025-09">Sep 2025</time>
+                                <p class="entry-text-role">Music Composer | Music Producer | Sound Designer | Audio Implementer</p>
+                                <p class="entry-text-description">
+                                    An indie puzzle game in which I was responsible for nearly all aspects of the audio department, including composing and producing the in-game music, cutscenes sonorization, and contributing to the sound design.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/vBQSoJnpQuA?enablejsapi=1&origin=https://dkngameaudio.com"
+                                    title="The Explorer: 3D Game Kit Complete Resonorization [Educational Project]"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <div class="entry-title-links-wrapper">
+                                    <h3 class="entry-title-long">The Explorer: 3D Game Kit</h3>
+                                    <div class="entry-links">
+                                        <a
+                                            href="https://soundcloud.com/djkiar01/sets/complete-sonorization-the-explorer-3d-pm2-exam/s-kCwWBQJwgFk?si=0f2d66c91c2a4274b955cf465f7d86db&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            aria-label="Listen to The Explorer: 3D Game Kit OST on SoundCloud">
+                                            <img
+                                                class="soundcloud-logo-desktop" 
+                                                src="./resources/images/soundcloud_logo_color.png"
+                                                alt="SoundCloud">
+                                            <img
+                                                class="soundcloud-logo-mobile" 
+                                                src="./resources/images/soundcloud_icon_color.png"
+                                                alt="SoundCloud">
+                                        </a>
+                                    </div>
+                                </div>
+                                <time class="entry-text-date" datetime="2025-02">Feb 2025</time>
+                                <p class="entry-text-role">Music Composer | Music Producer | Audio Implementer</p>
+                                <p class="entry-text-description">
+                                    An original soundtrack composed and produced for The Explorer: 3D Game Kit.
+                                    <br>
+                                    For this academic project, I also managed audio implementation and interactive integration using Wwise.
+                                </p>
+                            </div>
+                        </article>
+        
+                        <article class="portfolio-entry-row">
+                            <figure class="entry-img-wrapper">
+                                <img
+                                    src="./resources/images/Tarot requiem_placeholder.png"
+                                    alt="Tarot Requiem placeholder cover image">
+                            </figure>
+                            <div class="entry-text-wrapper">
+                                <div class="entry-title-links-wrapper">
+                                    <h3>Tarot Requiem</h3>
+                                    <div class="entry-links">
+                                        <a href="https://xino-spefno.itch.io/handys-wander" target="_blank" rel="noreferrer" aria-label="Play Tarot: Requiem on itch.io">
+                                            <img
+                                                class="itchio-logo-desktop" 
+                                                src="./resources/images/itchio_badge.png"
+                                                alt="itch.io">
+                                            <img
+                                                class="itchio-logo-mobile"
+                                                src="./resources/images/itchio_app-icon.png"
+                                                alt="itch.io">
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="entry-text-role">Audio Director | Music Composer | Music Producer | Sound Designer | Audio Implementer</p>
+                                <p class="entry-text-description">
+                                    <strong>Among the finalists of Bologna Game Farm</strong>, Tarot Requiem is a tarot-inspired deckbuilding roguelike currently in development, where every card played gradually consumes the protagonist’s very existence.
+                                </p>
+                                <h5>Currently in development</h5>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-entry-row-squares">
+                            <h3>Music Production Work</h3>
+                            <figure class="entry-square-img-wrapper">
+                                <div class="square-img">
+                                    <a
+                                        href="https://open.spotify.com/intl-it/track/7kaqdzFaDBFiiTOisL4tHC?si=8de23a0ece20486b"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="square-img-link">
+                                        <img
+                                            src="./resources/images/Abracadabra_cover.png"
+                                            alt="Gabs – Abracadabra cover art">
+                                        <div class="square-overlay">
+                                            <p class="square-overlay-description">A Trap song I've produced and mixed for Gabs, an established rapper and freestyler within the Italian rap scene.</p>
+                                        </div>
+                                    </a>
+                                    <p class="img-square-text">Gabs – Abracadabra</p>
+                                </div>
+                                <div class="square-img">
+                                    <a
+                                        href="https://open.spotify.com/intl-it/track/1n8aRknv9TQvr3ibFxaZAk?si=b2c0b19d626942a6"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="square-img-link">
+                                        <img
+                                            src="./resources/images/Nero_di_seppia_cover.png"
+                                            alt="Cokie – Nero di Seppia cover art">
+                                        <div class="square-overlay">
+                                            <p class="square-overlay-description">A Hip-Hop song I've produced for the artist Cokie.</p>
+                                        </div>
+                                    </a>
+                                    <p class="img-square-text">Cokie – Nero di Seppia</p>
+                                </div>
+                            </figure>
+                        </article>
+
+                        <a class="CTA-email" href="mailto:contact@dkngameaudio.com">
+                                <p>
+                                    Get in touch
+                                    <svg
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22,5V9L12,13,2,9V5A1,1,0,0,1,3,4H21A1,1,0,0,1,22,5ZM2,11.154V19a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V11.154l-10,4Z"/>
+                                    </svg>
+                                </p>
+                                <p>contact@dkngameaudio.com</p>
+                        </a>
+
+                        <ul class="tools-strip-desktop">
+                            <li>
+                                <img
+                                    class="wwise-logo" 
+                                    src="./resources/images/wwise_logo_rgb.png"
+                                    alt="Wwise logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="fmod-logo"
+                                    src="./resources/images/FMOD Logo Black - Transparent Background.png"
+                                    alt="FMOD logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="ableton-logo-desktop"
+                                    src="./resources/images/Ableton_Live_Logo.svg.png"
+                                    alt="Ableton live logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="fl-logo-desktop" 
+                                    src="./resources/images/FLStudio_Logo_Light.png"
+                                    alt="FL Studio icon">
+                            </li>
+                            <li>
+                                <img
+                                    class="logic-pro-logo"
+                                    src="./resources/images/Logicpro-icon.png"
+                                    alt="Logic Pro logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="pro-tools-logo"
+                                    src="./resources/images/ProTools_logo.png"
+                                    alt="Pro Tools logo">
+                            </li>
+                        </ul>
+
+                        <ul class="tools-strip-mobile"> <!-- Hidden on desktop -->
+                            <li>
+                                <img
+                                    class="wwise-logo" 
+                                    src="./resources/images/wwise_logo_rgb.png"
+                                    alt="Wwise logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="fmod-logo"
+                                    src="./resources/images/FMOD Logo Black - Transparent Background.png"
+                                    alt="FMOD logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="fl-logo-mobile"
+                                    src="./resources/images/FLStudio20_MasterIcon.png"
+                                    alt="FL Studio icon">
+                            </li>
+                            <li>
+                                <img
+                                    class="logic-pro-logo"
+                                    src="./resources/images/Logicpro-icon.png"
+                                    alt="Unreal Engine logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="ableton-logo-mobile"
+                                    src="./resources/images/Ableton_logo_mobile.png"
+                                    alt="Ableton live logo">
+                            </li>
+                            <li>
+                                <img
+                                    class="pro-tools-logo"
+                                    src="./resources/images/ProTools_logo.png"
+                                    alt="Pro Tools logo">
+                            </li>
+                        </ul>
+
+                        <footer>
+                            <p>A division of DKN</p>
+                            <div class="footer-link">
+                                <p>Studio head:</p>
+                                <a href="https://dunkan.world" target="_blank" rel="noreferrer">Dunkan</a>
+                            </div>
+                            <p>© <span id="copyright-year"></span> DKN Game Audio</p>
+                        </footer>
+                    </div>
+                </section>
+            </main>
         </div>
         <div id="rotate-message">
             <p>Please rotate your device</p>

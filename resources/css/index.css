@@ -279,6 +279,12 @@ Character select screen
     gap: 8px;
 }
 
+/* Makes the h1 invisible to the layout engine: the h1 contributes to the semantics
+but doesn't affect the layout */
+.character-select-footer h1 {
+        display: contents;
+    }
+
 .character-select-footer img {
     width: 160px;
     height: auto;

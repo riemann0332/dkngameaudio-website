@@ -1,0 +1,21 @@
+{
+    "name": "DKN Game Audio",
+    "short_name": "DKN GA",
+    "description": "Game audio division specializing in music composition, sound design, and implementation.",
+    "start_url": "/",
+    "display": "browser",
+    "background_color": "#0D0D14",
+    "theme_color": "#0D0D14",
+    "icons": [
+        {
+            "src": "./resources/images/dknga_touchIcon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "./resources/images/dknga_favicon.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+    ]
+}

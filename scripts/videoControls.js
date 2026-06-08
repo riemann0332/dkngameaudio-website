@@ -1,6 +1,7 @@
 const videoWrappers = document.querySelectorAll(".entry-video-wrapper");
 
 // When a video starts playing, pause all others
+/* Doesn't work, come back to this to subscribe to YouTube's own API and do this properly
 window.addEventListener('message', (event) => {
     if (event.origin !== 'https://www.youtube.com') return;
     console.log(event.data);
@@ -22,6 +23,7 @@ window.addEventListener('message', (event) => {
         }
     }
 })
+*/
 
 const videoObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -40,6 +42,7 @@ const videoObserver = new IntersectionObserver((entries) => {
 videoWrappers.forEach(wrapper => videoObserver.observe(wrapper));
 
 // Subscribe each iframe to broadcast state changes to this window
+/* Doesn't work, come back to this to subscribe to YouTube's own API and do this properly
 for (let wrapper of videoWrappers) {
     const iframe = wrapper.querySelector("iframe");
     iframe.addEventListener('load', () => {
@@ -51,3 +54,4 @@ for (let wrapper of videoWrappers) {
 
     })
 }
+*/
