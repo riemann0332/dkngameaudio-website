@@ -538,14 +538,12 @@ Portfolio sections
 .entry-text-wrapper h3 {
     font-size: 28px;
     letter-spacing: 0.08em;
+    line-height: 1.2;
     color: color-mix(in srgb, var(--content) 92%, transparent);
     margin-bottom: 30px;
 }
 
-.entry-text-wrapper h3:has(+ h4) {
-    margin-bottom: 0;
-}
-
+.entry-text-wrapper h3:has(+ h4),
 .entry-text-wrapper h3:has(+ .entry-links) {
     margin-bottom: 0;
 }
@@ -562,6 +560,12 @@ Portfolio sections
     color: color-mix(in srgb, var(--content) 70%, transparent);
     margin-top: -36px;
     margin-bottom: 12px;
+}
+
+.entry-text-wrapper h5 {
+    font-size: 18px;
+    letter-spacing: 0.09em;
+    color: color-mix(in srgb, var(--content) 70%, transparent);
 }
 
 .entry-text-wrapper a {
@@ -830,10 +834,7 @@ footer p {
     transition: text-shadow 0.25s ease;
 }
 
-footer a:hover {
-    text-shadow: 0 0 10px color-mix(in srgb, var(--content) 64%, transparent);
-}
-
+footer a:hover,
 .footer-full-portfolio:hover {
     text-shadow: 0 0 10px color-mix(in srgb, var(--content) 64%, transparent);
 }
@@ -1099,7 +1100,6 @@ Media queries
         padding-bottom: 3dvh;
         margin-top: 7dvh;
     }
-
 
     footer a {
         font-size: 13px;
