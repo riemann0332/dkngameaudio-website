@@ -860,9 +860,9 @@ Media queries
     }
 
     .card-wrapper {
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    width: 100%;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        width: 100%;
     }
 
     .card-outer {
@@ -884,6 +884,7 @@ Media queries
     }
 
     .card-hero {
+        font-size: 22dvh;
         margin-top: 8px;
     }
 
@@ -893,6 +894,7 @@ Media queries
     }
 
     .card-name {
+        font-size: 3dvh;
         margin-bottom: 12px;
     }
 
