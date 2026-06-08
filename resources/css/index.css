@@ -1162,6 +1162,11 @@ Media queries
     .card-outer {
         height: 50dvh;
     }
+
+    .character-select-footer p {
+        letter-spacing: 0.2em;
+        text-indent: 0.2em;
+    } 
 }
 
 @media (hover: hover) {
