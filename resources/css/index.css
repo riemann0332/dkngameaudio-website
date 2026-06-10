@@ -892,6 +892,21 @@ footer p {
 Media queries
 */
 
+@media (max-width: 670px) {
+    .card-wrapper {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+    }
+    .card-outer {
+        height: 75dvh;
+        width: auto;
+        aspect-ratio: 5/7.6;
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+}
+
 /* iPhone 8 and similar */
 @media (max-width: 480px) {
 
@@ -908,44 +923,32 @@ Media queries
         gap: 4px;
     }
 
-    .card-wrapper {
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        width: 100%;
-    }
-
-    .card-outer {
-        height: 75dvh;
-        width: auto;
-        aspect-ratio: 5/7.6;
-        scroll-snap-align: center;
-        flex-shrink: 0;
-    }
-
     .card-outer:hover,
     .card-selected,
     .card-selected:hover {
         transform: none;
     }
 
+    /*
     .card-inner {
         padding-top: 4vw;
     }
+    
 
     .card-hero {
         font-size: 22dvh;
         margin-top: 8px;
-    }
-
+    }*/
+    
     .card-inner hr {
-        width: 72px;
-        margin-bottom: 22px;
+        width: 19cqw;
     }
-
+/*
     .card-name {
         font-size: 3dvh;
         margin-bottom: 12px;
     }
+    */
 
     .character-select-footer {
         gap: 4px;
@@ -1181,40 +1184,12 @@ Media queries
     .card-outer {
         height: 54dvh;
     }
-
-    .card-inner {
-        padding-top: 5vw;
-    }
-
-    .card-hero {
-        font-size: 22dvh;
-        flex: 0 0 auto;
-        /*font-size: 185px;*/
-    }
-
-    .card-name {
-        font-size: 3dvh;
-        /*font-size: 24px;*/ 
-    }
 }
 
 /* iPhone 14Max and Samsung Galaxy S20 Ultra, unnecessarily tall screens */
 @media (max-width: 480px) and (min-height: 900px) {
     #character-select {
         gap: 4dvh;
-    }
-
-    .card-inner {
-        padding-bottom: 0;
-    }
-
-    .card-hero {
-        font-size: 22dvh;
-        margin-top: 12px;
-    }
-
-    .card-inner hr {
-        margin-bottom: 30px;
     }
 }
 
@@ -1228,6 +1203,13 @@ Media queries
         letter-spacing: 0.2em;
         text-indent: 0.2em;
     } 
+}
+
+/* Edge case of Galazy Z Fold 5, you're lucky I'm kind enough to handle this bullshit phone */
+@media (max-width: 480px) and (max-aspect-ratio: 2/5) {
+    .card-outer {
+        height: 44dvh;
+    }
 }
 
 @media (hover: hover) {
