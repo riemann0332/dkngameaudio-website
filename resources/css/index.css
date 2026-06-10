@@ -155,7 +155,7 @@ but doesn't affect the layout */
     padding:
         10.2cqw
         8cqw
-        9cqw;
+        9.5cqw;
     transition: border-color 0.5s;
 }
 
@@ -207,6 +207,9 @@ but doesn't affect the layout */
     flex-direction: column;
     align-items: center;
     gap: 5.4cqw;
+    /**/
+    margin-top: auto;
+    /**/
 }
 
 .card-text hr {
@@ -944,27 +947,10 @@ Media queries
     .card-selected:hover {
         transform: none;
     }
-
-    /*
-    .card-inner {
-        padding-top: 4vw;
-    }
-    
-
-    .card-hero {
-        font-size: 22dvh;
-        margin-top: 8px;
-    }*/
     
     .card-inner hr {
         width: 19cqw;
     }
-/*
-    .card-name {
-        font-size: 3dvh;
-        margin-bottom: 12px;
-    }
-    */
 
     .character-select-footer {
         gap: 4px;
