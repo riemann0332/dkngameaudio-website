@@ -150,6 +150,7 @@ but doesn't affect the layout */
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
     gap: 7cqw;
     border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
     padding:
@@ -177,7 +178,7 @@ but doesn't affect the layout */
 .card-hero {
     display: flex;
     flex-direction: column;
-    gap: 3cqw;
+    gap: 3cqw; /* between numeral and initial */
 }
 
 .card-numeral {
@@ -450,6 +451,7 @@ Portfolio sections
     max-width: 1250px;
     margin: 0 auto;
     padding: 20px;
+    
 }
 
 .portfolio-entry-row {
@@ -966,6 +968,10 @@ Media queries
         text-indent: 0.25em;
     }
 
+    .character-select-footer a {
+        font-size: 11px;
+    }
+
     .portfolio-header img {
         width: 124px;
         margin: 0;
@@ -1174,7 +1180,7 @@ Media queries
 /* Quick fix for iPhone SE and 11, will need refactoring with proper breakpoints */
 @media (max-width: 480px) and (max-height: 690px) {
     .card-outer {
-        height: 60dvh;
+        height: 64dvh;
     }
 }
 
