@@ -892,6 +892,22 @@ footer p {
 Media queries
 */
 
+@media (max-width:1000px) {
+    .portfolio-entry-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .portfolio-entry-row:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .entry-video-wrapper,
+    .entry-img-wrapper {
+        flex: none;
+    }
+}
+
 @media (max-width: 670px) {
     .card-wrapper {
         overflow-x: scroll;
